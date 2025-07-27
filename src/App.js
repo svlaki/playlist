@@ -160,7 +160,7 @@ function App() {
           <img 
             src= "/buttons/headphones_fixed.png"
             alt=""
-            className="headphones"
+            className={`headphones ${isPlaying ? 'playing' : 'paused'}`}
           />
 
           <img 
@@ -172,7 +172,7 @@ function App() {
           <img 
             src= "/buttons/joint_fixed.png"
             alt=""
-            className="joint"
+            className={`joint ${isPlaying ? 'playing' : 'paused'}`}
           />
 
           <div className = "content">

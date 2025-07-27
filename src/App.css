@@ -222,7 +222,7 @@ html, body {
 
 .spotify-link:hover {
   transform: scale(1.01);
-  color: lightcyan;
+  color: lightskyblue;
 }
 
 .song-item {
@@ -260,6 +260,14 @@ html, body {
   animation: bounce-scale 1s infinite;
 }
 
+.headphones.playing {
+  animation-play-state: running;
+}
+
+.headphones.paused {
+  animation-play-state: paused;
+}
+
 .truck {
   height: 170px;
   position: absolute;
@@ -277,6 +285,13 @@ html, body {
   animation: bounce-scale 1s infinite;
 }
 
+.joint.playing {
+  animation-play-state: running;
+}
+
+.joint.paused {
+  animation-play-state: paused;
+}
 
 @keyframes bounce-scale {
   0% {
