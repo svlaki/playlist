@@ -1,58 +1,87 @@
+@font-face {
+  font-family: 'architype';
+  src: url('../public/Ballmer-ArchiType.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'digital';
+  src: url('../public/digital.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
 .welcome-screen {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   padding: 40px;           /* space inside the welcome box */
-  margin: 50px auto;       /* 50px top/bottom, auto centers it horizontally */
-  border: 2px solid black;  /* so you can see the box */
+  margin: 80px auto;       /* 50px top/bottom, auto centers it horizontally */
+  border: 1px solid black;  /* so you can see the box */
   background-color: white;
   width: 500px; 
   height: 675px; 
 
-  background-image: url('/public/extra_images/01-cool-cat.png');
+  background-image: url('/public/extra_images/snow-2.jpg');
   background-size: cover;
   background-position: center;
-
-  font-family: 'Times New Roman', serif;
 }
 
-.welcome-screen h1 {
-  color: white;
-  text-align: center;
+.welcome-message {
+  position:absolute;
+  width: 400px;
+  left: 225px;
+  bottom: 450px;
 }
 
 .enter-button {
-  box-sizing: border-box;
-  background-color: lightcyan;
   color: black;
-  font-family: 'Times New Roman', serif;
   padding: 10px;
-  width: 55px;
-
+  margin: 10px 0px 0px 0px;
+  width: 150px;
+  margin: 400px 0px 0px 0px;
   transition: all 0.5s ease;
+  animation: pulse 1s step-start infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .enter-button:hover {
-  background-color: #357abd;        /* darker blue on hover */
-  transform: translateY(-2px);      /* moves up 2px */
-  color: white;
+  transform: scale(1.25);      /* moves up 2px */
 }
 
 /* --------------------------------------------------------- */
 
 .player-screen {
-  margin: 50px auto;
+  margin: 80px auto;
   width: 500px; 
   height: 675px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid black;
+  border: 1px solid black;
 
-  font-family: 'Times New Roman', serif;
+  font-family: 'architype', sans-serif;
 }
 
 .title {
@@ -60,34 +89,26 @@
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: lightskyblue;
   margin: 0px 0px 0px 0px;
   width: 500px;
-  border: 2px solid blue;
   position: relative;
   color: black;
 }
 
-.return-home {
-  box-sizing: border-box;
-  border: 1px solid black;
+.home-button {
   position: absolute;
   top: 5px;
   left: 5px;
-
-  font-family: 'Times New Roman', serif;
-  text-align: center;
-  background-color: lightcyan;
-  color: black;
+  width: 60px;
   padding: 5px;
+  cursor: pointer;
   
   transition: all 0.5s ease;
 }
 
-.return-home:hover {
-  background-color: #357abd;        /* darker blue on hover */
-  transform: translateY(-2px);      /* moves up 2px */
-  color: white;
+.home-button:hover {
+  transform: scale(1.25);
 }
 
 .content {
@@ -99,7 +120,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid hotpink;
   position: relative;
   padding: 5px;
 }
@@ -109,43 +129,37 @@
   top: 30px;
   right: 0px;
   width: 345px;
-  height: 450px;
-  background-color: rgba(0, 255, 255, 0.5);
+  height: 500px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 10px;
   padding: 10px;
-  /* border: 2px solid red; */
+  border: 1px solid black;
 }
 
 .control-section {
   display: flex;
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   right: 0px;
   width: 345px;
-  height: 50px;
+  height: 70px;
   justify-content: center;
   align-items: center;
   background-color: white;
   margin: 10px;
   padding: 10px;
-  /*border: 2px black solid; */
+  border-right: 1px black solid;
 }
 
 .control-button {
-  font-family: 'Times New Roman', serif;
-  background-color: pink;
-  border: 0px;
-  border-radius: 50px; 
-  padding: 5px 10px;
-  margin: 10px;
-
-  transition:
-    transform 0.2s ease,
-    background-color 0.1s ease;
+  margin: 15px;
+  height: 25px;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .control-button:hover {
@@ -156,34 +170,122 @@
   background-color: hotpink;           
 }
 
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: hotpink;
+  cursor: pointer;
+}
+
+.progress-bar {
+  font-family: "digital", sans-serif;
+  flex: 1;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+  color: hotpink;
+}
+
+.time-display {
+  font-size: 14px;
+  font-family: "digital", sans-serif;
+  color: black;
+  min-width: 35px;
+  text-align: center;
+}
+
 .playlist-section {
   position: absolute;
   top: 30px;
   left: 0px;
   width: 75px;
-  height: 490px;
-  background-color: lightpink;
+  height: 500px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 10px;
   padding: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
+}
+
+.spotify-link {
+  color: hotpink;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.spotify-link:hover {
+  transform: scale(1.01);
+  color: lightcyan;
 }
 
 .song-item {
   border-radius: 10px;
+  margin: 15px;
+  padding: 0px;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .song-item:hover {
   transform: translateY(-5px);
+  color: hotpink;
 }
 
 .song-item.active {
-  background-color: #4a90e2;     /* blue background for current song */
-  color: black;
+  background-color: lightcyan; 
   font-weight: bold;
+}
+
+.wolp {
+  height: 140px;
+  position: absolute;
+  top: 52px;
+  right: 500px;
+  z-index: 10;
+}
+
+.headphones {
+  height: 120px;
+  position: absolute;
+  top: 5px;
+  right: 470px;
+  z-index: 11;
+  animation: bounce-scale 1s infinite;
+}
+
+.truck {
+  height: 170px;
+  position: absolute;
+  bottom: 41.5px;
+  left: 480px;
+  z-index: 10;
+}
+
+.joint {
+  height: 120px;
+  position: absolute;
+  bottom: 100px;
+  left: 410px;
+  z-index: 11;
+  animation: bounce-scale 1s infinite;
+}
+
+
+@keyframes bounce-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

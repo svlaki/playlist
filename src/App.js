@@ -42,6 +42,7 @@ function App() {
   // Function to handle loaded metadata (duration)
   const handleMeta = () => {
     if (audioRef) {
+      console.log(audioRef.duration)
       setDuration(audioRef.duration);
     }
   }
@@ -50,7 +51,7 @@ function App() {
   const handleProgressBar = (newTime) => {
     if (audioRef) {
       audioRef.currentTime = newTime;
-      setCurrentTime = newTime;
+      setCurrentTime(newTime);
     }
   }
 
@@ -122,10 +123,18 @@ function App() {
       {showWelcome ? (
         // Welcome screen
         <div className = "welcome-screen">
-          <h1> welcome to your music player! </h1>
-          <button onClick={enterPlayer} className="enter-button">
-            Enter!
-          </button>
+          <img
+            className = "welcome-message"
+            src = "/buttons/welcome2.png"
+            alt = ""
+          />
+
+          <img 
+            onClick={enterPlayer} 
+            className="enter-button"
+            src = "/buttons/enter.png"
+            alt = ""
+          />
         </div>
       ) : 
       (
@@ -134,11 +143,37 @@ function App() {
           
           <div className = "title">
             <h1>music player!</h1>
-            <button onClick={enterWelcome} className="return-home">
-              Home
-          </button>
+            <img 
+            onClick={enterWelcome} 
+            className="home-button"
+            src = "/buttons/back.png"
+            alt = ""
+          />
           </div>
 
+          <img 
+            src= "/buttons/wolp_fixed.png"
+            alt=""
+            className = "wolp"
+          />
+
+          <img 
+            src= "/buttons/headphones_fixed.png"
+            alt=""
+            className="headphones"
+          />
+
+          <img 
+            src= "/buttons/snow4-fixed.png"
+            alt=""
+            className = "truck"
+          />
+
+          <img 
+            src= "/buttons/joint_fixed.png"
+            alt=""
+            className="joint"
+          />
 
           <div className = "content">
             <div className = "player-section">
@@ -173,7 +208,7 @@ function App() {
               src={currentSong.audioFile}
               onEnded={() => handleNext()}
               onTimeUpdate={handleTimeUpdate}
-              onMeta = {handleMeta}
+              onLoadedMetadata = {handleMeta}
           />
    
       </div>          
