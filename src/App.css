@@ -179,9 +179,9 @@ html, body {
 }
 
 .progress-bar {
-  font-family: "digital", sans-serif;
+  font-family: "digital", sans-serif, monospace;
   flex: 1;
-  height: 8px;
+  height: 7px;
   position: relative;
   overflow: hidden;
   color: hotpink;

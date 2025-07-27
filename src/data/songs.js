@@ -13,7 +13,7 @@ export const songs = [
     artist: "tribe", 
     audioFile: "/songs/02_Electric_Relaxation.mp3",
     image: "/images/02_shrooms.png",
-    note: "- all we listened 2 tripping shrooms in the cactus garden"
+    note: "- all we listened 2 tripping in the cactus garden"
   },
   {
     id: 3,
