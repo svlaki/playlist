@@ -23,12 +23,12 @@ html, body {
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  padding: 40px;           /* space inside the welcome box */
-  margin: 80px auto;       /* 50px top/bottom, auto centers it horizontally */
+  padding: 1vw;
+  margin: 5vw auto;       /* 50px top/bottom, auto centers it horizontally */
   border: 1px solid black;  /* so you can see the box */
   background-color: white;
-  width: 500px; 
-  height: 675px; 
+  width: 33.333vw; 
+  height: 45vw; 
 
   background-image: url('/public/extra_images/snow-2.jpg');
   background-size: cover;
@@ -37,17 +37,17 @@ html, body {
 
 .welcome-message {
   position:absolute;
-  height: 300px;
-  left: 225px;
-  bottom: 450px;
+  height: 20vw;
+  left: 15vw;
+  bottom: 30vw;
 }
 
 .enter-button {
   color: black;
-  padding: 10px;
-  margin: 10px 0px 0px 0px;
-  width: 150px;
-  margin: 400px 0px 0px 0px;
+  padding: 1vw;
+  margin: 1vw 0px 0px 0px;
+  width: 10vw;
+  margin: 28vw 0px 0px 0px;
   transition: all 0.5s ease;
   animation: pulse 1s step-start infinite;
   cursor: pointer;
@@ -72,9 +72,9 @@ html, body {
 /* --------------------------------------------------------- */
 
 .player-screen {
-  margin: 80px auto;
-  width: 500px; 
-  height: 675px; 
+  margin: 5.333vw auto;
+  width: 33.333vw; 
+  height: 45vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,17 +91,17 @@ html, body {
   align-items: center;
   background-color: lightskyblue;
   margin: 0px 0px 0px 0px;
-  width: 500px;
+  width: 33.33vw;
   position: relative;
   color: black;
 }
 
 .home-button {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 60px;
-  padding: 5px;
+  top: 0.333vw;
+  left: 0.333vw;
+  width: 4vw;
+  padding: 0.333vw;
   cursor: pointer;
   
   transition: all 0.5s ease;
@@ -112,8 +112,8 @@ html, body {
 }
 
 .content {
-  width: 490px;
-  height: 675px;
+  width: 32.667vw;
+  height: 45vw;
   background-color: lightcyan;
   display: flex;
   flex-direction: row-reverse;
@@ -121,43 +121,43 @@ html, body {
   align-items: center;
   text-align: center;
   position: relative;
-  padding: 5px;
+  padding: 0.333vw;
 }
 
 .player-section {
   position: absolute;
-  top: 30px;
+  top: 2vw;
   right: 0px;
-  width: 345px;
-  height: 500px;
+  width: 23vw;
+  height: 33.333vw;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.667vw;
+  padding: 0.667vw;
   border: 1px solid black;
 }
 
 .control-section {
   display: flex;
   position: absolute;
-  bottom: 40px;
+  bottom: 2.667vw;
   right: 0px;
-  width: 345px;
-  height: 70px;
+  width: 23vw;
+  height: 4.667vw;
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.667vw;
+  padding: 0.667vw;
   border-right: 1px black solid;
 }
 
 .control-button {
-  margin: 15px;
-  height: 25px;
+  margin: 1vw;
+  height: 1.667vw;
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -181,33 +181,33 @@ html, body {
 .progress-bar {
   font-family: "digital", sans-serif;
   flex: 1;
-  height: 8px;
+  height: 0.533vw;
   position: relative;
   overflow: hidden;
   color: hotpink;
 }
 
 .time-display {
-  font-size: 14px;
+  font-size: 1vw;
   font-family: "digital", sans-serif;
   color: black;
-  min-width: 35px;
+  min-width: 2.333vw;
   text-align: center;
 }
 
 .playlist-section {
   position: absolute;
-  top: 30px;
+  top: 2vw;
   left: 0px;
-  width: 75px;
-  height: 500px;
+  width: 5vw;
+  height: 33.333vw;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.667vw;
+  padding: 0.667vw;
   border: 1px solid black;
 }
 
@@ -215,8 +215,8 @@ html, body {
   color: hotpink;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  padding: 10px;
+  font-size: 1.2vw;
+  padding: 0.667vw;
   transition: all 0.2s ease;
 }
 
@@ -226,15 +226,15 @@ html, body {
 }
 
 .song-item {
-  border-radius: 10px;
-  margin: 15px;
+  border-radius: 2.667vw;
+  margin: 1vw;
   padding: 0px;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .song-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.333vw);
   color: hotpink;
 }
 
@@ -244,18 +244,18 @@ html, body {
 }
 
 .wolp {
-  height: 140px;
+  height: 9.333vw;
   position: absolute;
-  top: 52px;
-  right: 500px;
+  top: 3.467vw;
+  right: 33.333vw;
   z-index: 10;
 }
 
 .headphones {
-  height: 120px;
+  height: 8vw;
   position: absolute;
-  top: 5px;
-  right: 470px;
+  top: 0.333vw;
+  right: 31.333vw;
   z-index: 11;
   animation: bounce-scale 1s infinite;
 }
@@ -269,18 +269,18 @@ html, body {
 }
 
 .truck {
-  height: 170px;
+  height: 11.333vw;
   position: absolute;
-  bottom: 41.5px;
-  left: 480px;
+  bottom: 2.77vw;
+  left: 32vw;
   z-index: 10;
 }
 
 .joint {
-  height: 120px;
+  height: 8vw;
   position: absolute;
-  bottom: 100px;
-  left: 410px;
+  bottom: 6.667vw;
+  left: 27.333vw;
   z-index: 11;
   animation: bounce-scale 1s infinite;
 }
@@ -306,9 +306,9 @@ html, body {
 }
 
 .jk {
-  height: 140px;
+  height: 9.333vw;
   position: absolute;
-  bottom: 170px;
-  left: 325px;
+  bottom: 11.333vw;
+  left: 21.667vw;
   z-index: 10;
 }

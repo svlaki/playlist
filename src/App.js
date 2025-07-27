@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App_flex.css';
 import Player from './components/Player';  // Import your Player
 import NowPlaying from './components/nowPlaying';
 import Playlist from './components/Playlist';
@@ -125,7 +125,7 @@ function App() {
         <div className = "welcome-screen">
           <img
             className = "welcome-message"
-            src = "/buttons/welcome2.png"
+            src = "/buttons/hi.png"
             alt = ""
           />
 
@@ -173,6 +173,12 @@ function App() {
             src= "/buttons/joint_fixed.png"
             alt=""
             className={`joint ${isPlaying ? 'playing' : 'paused'}`}
+          />
+
+          <img 
+            src= "/buttons/jk.png"
+            alt=""
+            className = "jk"
           />
 
           <div className = "content">

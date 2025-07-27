@@ -13,7 +13,7 @@ export const songs = [
     artist: "tribe", 
     audioFile: "/songs/02_Electric_Relaxation.mp3",
     image: "/images/02_shrooms.png",
-    note: "- all we listened to tripping shrooms in the cactus garden"
+    note: "- all we listened 2 tripping shrooms in the cactus garden"
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ export const songs = [
     artist: "a$ap rocky", 
     audioFile: "/songs/09_LSD.mp3",
     image: "/images/03_clingy_otter.png",
-    note: "- remember the first time we moked together in the statue garden"
+    note: "- remember the 1st time we moked together in the statue garden"
   },
   {
     id: 10,
@@ -77,6 +77,6 @@ export const songs = [
     artist: "air", 
     audioFile: "/songs/10_Venus.mp3",
     image: "/images/10_fountain.png",
-    note: "- i love & miss you sweet boy"
+    note: "- i love & miss u sweet boy"
   },
 ];
