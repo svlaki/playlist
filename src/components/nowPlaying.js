@@ -12,11 +12,12 @@ const NowPlaying = ({currentSong}) => {
             <img
                 src={currentSong.image}
                 alt={currentSong.title}
+                style={{width: '325px', height: '325px'}} 
                 className="album-art"
             />
 
             <div className="song-info">
-                <h2>{currentSong.title} - {currentSong.artist} </h2>
+                <h3>{currentSong.title} - {currentSong.artist} </h3>
             </div>
 
             <div className="song-note">

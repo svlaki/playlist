@@ -10,7 +10,7 @@ export const songs = [
   {
     id: 2,
     title: "electric relaxation",
-    artist: "a tribe called quest", 
+    artist: "tribe", 
     audioFile: "/songs/02_Electric_Relaxation.mp3",
     image: "/images/02_shrooms.png",
     note: "all we listened to tripping shrooms in the cactus garden"
@@ -21,7 +21,7 @@ export const songs = [
     artist: "frank ocean", 
     audioFile: "/songs/03_Nights.mp3",
     image: "/images/03-titos-flowers.png",
-    note: "what was playing when u asked me out ft. titos bouqet"
+    note: "what was playing when u asked me out ft. titos bouquet"
   },
   {
     id: 4,

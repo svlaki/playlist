@@ -12,6 +12,8 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false); // Starts as not playing
   const [audioRef, setAudioRef] = useState(null);  // Starts as no audio
   const [showWelcome, setShowWelcome] = useState(true);  // Starts on the welcome page
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   const currentSong = songs[currentSongIdx];
 
@@ -30,6 +32,27 @@ function App() {
     }
   }, [currentSongIdx, audioRef, isPlaying]);  // Run when song or audio changes
 
+  // Function to handle time updates
+  const handleTimeUpdate = () => {
+    if (audioRef) {
+      setCurrentTime(audioRef.currentTime);
+    }
+  }
+
+  // Function to handle loaded metadata (duration)
+  const handleMeta = () => {
+    if (audioRef) {
+      setDuration(audioRef.duration);
+    }
+  }
+
+  // Function to handle progress bar clicks
+  const handleProgressBar = (newTime) => {
+    if (audioRef) {
+      audioRef.currentTime = newTime;
+      setCurrentTime = newTime;
+    }
+  }
 
   // Function to handle showing the welcome page
   const enterPlayer = () => {
@@ -37,6 +60,7 @@ function App() {
     setIsPlaying(true);
   }
 
+  // Function to handle displaying the welcome page
   const enterWelcome = () => {
     setShowWelcome(true);
     setIsPlaying(false);
@@ -98,8 +122,7 @@ function App() {
       {showWelcome ? (
         // Welcome screen
         <div className = "welcome-screen">
-          <h1> Welcome to your music player! </h1>
-
+          <h1> welcome to your music player! </h1>
           <button onClick={enterPlayer} className="enter-button">
             Enter!
           </button>
@@ -110,23 +133,31 @@ function App() {
         <div className = "player-screen">
           
           <div className = "title">
-            <h1>My Music Player</h1>
+            <h1>music player!</h1>
             <button onClick={enterWelcome} className="return-home">
               Home
-            </button>
+          </button>
           </div>
+
 
           <div className = "content">
             <div className = "player-section">
-              <NowPlaying currentSong = {currentSong} />
-              <Player 
-                currentSong = {currentSong}
-                isPlaying = {isPlaying}
-                onPlayPause={handlePlayPause}
-                onNext={handleNext}
-                onPrevious={handlePrev}
-              /> 
+              <NowPlaying currentSong = {currentSong} /> 
             </div>
+
+            <div className = "control-section" >
+              <Player 
+                  currentSong = {currentSong}
+                  isPlaying = {isPlaying}
+                  onPlayPause={handlePlayPause}
+                  onNext={handleNext}
+                  onPrevious={handlePrev}
+                  currentTime = {currentTime}
+                  duration = {duration}
+                  onProgressClick = {handleProgressBar}
+              />
+            </div>
+
             <div className = "playlist-section">
               <Playlist 
               songs = {songs}
@@ -136,12 +167,13 @@ function App() {
             </div>
           </div>
 
-          
 
           <audio
               ref={(audio) => setAudioRef(audio)}
               src={currentSong.audioFile}
               onEnded={() => handleNext()}
+              onTimeUpdate={handleTimeUpdate}
+              onMeta = {handleMeta}
           />
    
       </div>          

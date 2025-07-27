@@ -3,7 +3,7 @@ import React from "react"
 const Playlist= ({ songs, currentSongId, onSongSelect }) => {
     return (
         <div className = "playlist">
-            <h2> our playlist! </h2>
+            <h3> songs 4 u </h3>
 
             <div className = "song-list">
                 {songs.map((song) => (
