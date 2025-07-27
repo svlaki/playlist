@@ -13,8 +13,7 @@
 }
 
 html, body {
-    overflow: hidden;
-    height: 100%;
+    overflow: scroll;
 }
 
 .welcome-screen {
@@ -28,7 +27,7 @@ html, body {
   border: 1px solid black;  /* so you can see the box */
   background-color: white;
   width: 33.333vw; 
-  height: 45vw; 
+  height: 84.375vh;
 
   background-image: url('/public/extra_images/snow-2.jpg');
   background-size: cover;
@@ -39,13 +38,13 @@ html, body {
   position:absolute;
   height: 20vw;
   left: 15vw;
-  bottom: 30vw;
+  bottom: 56.25vh;
 }
 
 .enter-button {
   color: black;
   padding: 1vw;
-  margin: 1vw 0px 0px 0px;
+  margin: 10vw 0px 0px 0px;
   width: 10vw;
   margin: 28vw 0px 0px 0px;
   transition: all 0.5s ease;
@@ -74,7 +73,7 @@ html, body {
 .player-screen {
   margin: 5.333vw auto;
   width: 33.333vw; 
-  height: 45vw;
+  height: 84.375vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +91,7 @@ html, body {
   background-color: lightskyblue;
   margin: 0px 0px 0px 0px;
   width: 33.33vw;
+  height: 10vh;
   position: relative;
   color: black;
 }
@@ -101,6 +101,7 @@ html, body {
   top: 0.333vw;
   left: 0.333vw;
   width: 4vw;
+  height: 7vh;
   padding: 0.333vw;
   cursor: pointer;
   
@@ -113,7 +114,7 @@ html, body {
 
 .content {
   width: 32.667vw;
-  height: 45vw;
+  height: 84.375vh;
   background-color: lightcyan;
   display: flex;
   flex-direction: row-reverse;
@@ -126,10 +127,10 @@ html, body {
 
 .player-section {
   position: absolute;
-  top: 2vw;
+  top: 3.75vh;
   right: 0px;
   width: 23vw;
-  height: 33.333vw;
+  height: 62.5vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -143,10 +144,10 @@ html, body {
 .control-section {
   display: flex;
   position: absolute;
-  bottom: 2.667vw;
+  bottom: 5vh;
   right: 0px;
   width: 23vw;
-  height: 4.667vw;
+  height: 8.75vh;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -157,7 +158,7 @@ html, body {
 
 .control-button {
   margin: 1vw;
-  height: 1.667vw;
+  height: 3.125vh;
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -181,7 +182,7 @@ html, body {
 .progress-bar {
   font-family: "digital", sans-serif;
   flex: 1;
-  height: 0.533vw;
+  height: 1vh;
   position: relative;
   overflow: hidden;
   color: hotpink;
@@ -197,10 +198,10 @@ html, body {
 
 .playlist-section {
   position: absolute;
-  top: 2vw;
+  top: 3.75vh;
   left: 0px;
   width: 5vw;
-  height: 33.333vw;
+  height: 62.5vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -244,17 +245,17 @@ html, body {
 }
 
 .wolp {
-  height: 9.333vw;
+  height: 17.5vh;
   position: absolute;
-  top: 3.467vw;
+  top: 6.5vh;
   right: 33.333vw;
   z-index: 10;
 }
 
 .headphones {
-  height: 8vw;
+  height: 15vh;
   position: absolute;
-  top: 0.333vw;
+  top: 0.625vh;
   right: 31.333vw;
   z-index: 11;
   animation: bounce-scale 1s infinite;
@@ -269,17 +270,17 @@ html, body {
 }
 
 .truck {
-  height: 11.333vw;
+  height: 21.25vh;
   position: absolute;
-  bottom: 2.77vw;
+  bottom: 5.175vh;
   left: 32vw;
   z-index: 10;
 }
 
 .joint {
-  height: 8vw;
+  height: 1vh;
   position: absolute;
-  bottom: 6.667vw;
+  bottom: 12.5vh;
   left: 27.333vw;
   z-index: 11;
   animation: bounce-scale 1s infinite;
@@ -306,9 +307,9 @@ html, body {
 }
 
 .jk {
-  height: 9.333vw;
+  height: 17.5vh;
   position: absolute;
-  bottom: 11.333vw;
+  bottom: 21.25vh;
   left: 21.667vw;
   z-index: 10;
 }
