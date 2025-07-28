@@ -25,8 +25,8 @@ html, body {
   align-items: center;
   padding: 40px;       /* space inside the welcome box */
   margin: 50px auto; 
-  width: 60vh; 
-  height: 85vh; 
+  width: 50vh; 
+  height: 75vh; 
   box-sizing: border-box;
 
   border-top: 40px solid transparent;
@@ -79,11 +79,12 @@ html, body {
 /* --------------------------------------------------------- */
 
 .player-screen {
-  margin: 50px auto;
-  width: 60vh; 
-  height: 85vh; 
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin: 50px auto;
+  width: 50vh; 
+  height: 75vh; 
   align-items: center;
   text-align: center;
   box-sizing: border-box;
@@ -98,24 +99,29 @@ html, body {
 }
 
 .title {
+  position: absolute;
+  top: -2%;
+  height: 10%;
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   background-color: lightskyblue;
-  margin: 0px 0px 0px 0px;
-  width: 100%;
-  position: relative;
+  margin: 10px 0px 0px 0px;
   color: black;
+  font-size: 2vh;
+  
 }
 
 .home-button {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 60px;
-  padding: 5px;
+  top: -2%;;
+  left: 0%;
+  width: 12%;
+  height: auto;
   cursor: pointer;
+  padding: 1%;
   
   transition: all 0.5s ease;
 }
@@ -125,8 +131,9 @@ html, body {
 }
 
 .content {
+  top: 10%;
   width: 100%;
-  height: 100%;
+  height: 90%;
   background-color: lightcyan;
   display: flex;
   flex-direction: row-reverse;
@@ -154,22 +161,23 @@ html, body {
 }
 
 .control-section {
-  display: flex;
   position: absolute;
+  display: flex;
+  flex-direction: row;
   bottom: 3%;
-  right: 4%;
-  width: 60%;
-  height: 70px;
-  justify-content: center;
+  width: 90%;
+  height: 12%;
+  left: 0%;
   align-items: center;
-  background-color: white;
-  padding: 10px;
-  border-bottom: 1px black solid;
+  background-color: lightcyan;
+  padding: 5%;
+  z-index: 8;
+  gap: 10%
 }
 
 .control-button {
-  margin: 15px;
-  height: 25px;
+  position: absolute;
+  width: 10%;
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -179,6 +187,21 @@ html, body {
 }
 
 .control-button:active {
+  background-color: hotpink;           
+}
+
+.gun-button {
+  position: absolute;
+  width: 20%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.gun-button:hover {
+  transform: scale(1.25);
+}
+
+.gun-button:active {
   background-color: hotpink;           
 }
 
@@ -226,8 +249,7 @@ html, body {
   color: hotpink;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  padding: 10px;
+  font-size: 2vh;
   transition: all 0.2s ease;
 }
 
@@ -237,8 +259,8 @@ html, body {
 }
 
 .song-item {
+  font-size: 1.8vh;
   border-radius: 10px;
-  margin: 15px;
   padding: 0px;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -255,18 +277,18 @@ html, body {
 }
 
 .wolp {
-  height: 140px;
   position: absolute;
-  top: -23%;
+  height: 20%;
+  top: -7.5%;
   right: 0%;
   z-index: 10;
 }
 
 .headphones {
-  height: 120px;
+  height: 15%;
   position: absolute;
-  top: -32%;
-  right: -6%;
+  top: -13%;
+  right: -4%;
   z-index: 11;
   animation: bounce-scale 1s infinite;
 }
@@ -280,7 +302,7 @@ html, body {
 }
 
 .truck {
-  height: 170px;
+  height: 24%;
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -288,10 +310,10 @@ html, body {
 }
 
 .joint {
-  height: 120px;
+  height: 16%;
   position: absolute;
-  bottom: 10%;
-  left: -15%;
+  bottom: 9%;
+  left: -12%;
   z-index: 11;
   animation: bounce-scale 1s infinite;
 }
@@ -317,9 +339,9 @@ html, body {
 }
 
 .jk {
-  height: 140px;
+  height: 30%;
   position: absolute;
-  bottom: 20%;
-  left: -32%;
+  bottom: 15%;
+  left: -50%;
   z-index: 10;
 }

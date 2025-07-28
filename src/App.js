@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Player from './components/Player';  // Import your Player
+import './App_flex.css';
+import Player from './components/Player2';  // Import your Player
 import NowPlaying from './components/nowPlaying';
 import Playlist from './components/Playlist';
 import { songs } from './data/songs';  // Import songs
@@ -144,66 +144,67 @@ function App() {
           <div className = "title">
             <h1>music player!</h1>
             <img 
-            onClick={enterWelcome} 
-            className="home-button"
-            src = "/designs/back.png"
-            alt = ""
-          />
+              onClick={enterWelcome} 
+              className="home-button"
+              src = "/designs/back.png"
+              alt = ""
+            />
           </div>
 
+            <img 
+                src= "/designs/wolp_fixed.png"
+                alt=""
+                className = "wolp"
+              />
+
+              <img 
+                src= "/designs/headphones_fixed.png"
+                alt=""
+                className={`headphones ${isPlaying ? 'playing' : 'paused'}`}
+              />
+
+              <img 
+                src= "/designs/snow4-fixed.png"
+                alt=""
+                className = "truck"
+              />
+
+              <img 
+                src= "/designs/joint_fixed.png"
+                alt=""
+                className={`joint ${isPlaying ? 'playing' : 'paused'}`}
+              />
+
+              <img 
+                src= "/designs/jk.png"
+                alt=""
+                className = "jk"
+              />
+
           <div className = "content">
-            <img 
-              src= "/designs/wolp_fixed.png"
-              alt=""
-              className = "wolp"
-            />
-
-            <img 
-              src= "/designs/headphones_fixed.png"
-              alt=""
-              className={`headphones ${isPlaying ? 'playing' : 'paused'}`}
-            />
-
-            <img 
-              src= "/designs/snow4-fixed.png"
-              alt=""
-              className = "truck"
-            />
-
-            <img 
-              src= "/designs/joint_fixed.png"
-              alt=""
-              className={`joint ${isPlaying ? 'playing' : 'paused'}`}
-            />
-
-            <img 
-              src= "/designs/jk.png"
-              alt=""
-              className = "jk"
-            />
 
             <div className = "player-section">
               <NowPlaying currentSong = {currentSong} /> 
-            </div>
 
-            <div className = "control-section" >
-              <Player 
-                  currentSong = {currentSong}
-                  isPlaying = {isPlaying}
-                  onPlayPause={handlePlayPause}
-                  onNext={handleNext}
-                  onPrevious={handlePrev}
-                  currentTime = {currentTime}
-                  duration = {duration}
-                  onProgressClick = {handleProgressBar}
-              />
+              <div className = "control-section" >
+                <Player
+                    currentSong = {currentSong}
+                    isPlaying = {isPlaying}
+                    onPlayPause={handlePlayPause}
+                    onNext={handleNext}
+                    onPrevious={handlePrev}
+                    currentTime = {currentTime}
+                    duration = {duration}
+                    onProgressClick = {handleProgressBar}
+                />
+              </div>
             </div>
 
             <div className = "playlist-section">
               <Playlist 
-              songs = {songs}
-              currentSongId = {currentSong.id}
-              onSongSelect = {handleSongSelect} 
+                songs = {songs}
+                currentSongId = {currentSong.id}
+                onSongSelect = {handleSongSelect} 
               />
             </div>
           </div>

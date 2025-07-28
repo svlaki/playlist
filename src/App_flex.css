@@ -13,19 +13,27 @@
 }
 
 html, body {
-    overflow: scroll;
+    /* overflow: hidden; */
+    height: 100%;
 }
 
 .welcome-screen {
   display: flex;
+  position: relative;
   flex-direction: column;
-  box-sizing: border-box;
-  width: 62.5vh; 
-  height: 84.375vh;
-  margin: 5% auto;       /* 50px top/bottom, auto centers it horizontally */
-  border: 1px solid black;  /* so you can see the box */
-  background-color: white;
+  justify-content: center;
   align-items: center;
+  padding: 40px;       /* space inside the welcome box */
+  margin: 50px auto; 
+  width: 60vh; 
+  height: 75vh; 
+  box-sizing: border-box;
+
+  border-top: 40px solid transparent;
+  border-right: 19px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-left: 7px solid transparent;
+  border-image: url('/public/designs/notepad.png') 40 19 21 7 stretch;
 
   background-image: url('/public/extra_images/snow-2.jpg');
   background-size: cover;
@@ -33,17 +41,20 @@ html, body {
 }
 
 .welcome-message {
-  position: absolute;
-  width: 25%;
-  left: 18%;
-  top: 10%;
+  position:absolute;
+  height: 45%;
+  left: -50%;
+  top: -10%;
 }
 
 .enter-button {
   position: absolute;
-  width: 12%;
-  left: 44%;
-  bottom: 20%;
+  color: black;
+  padding: 10px;
+  bottom: 5%;
+  width: 40%;
+
+  
   transition: all 0.5s ease;
   animation: pulse 1s step-start infinite;
   cursor: pointer;
@@ -68,38 +79,49 @@ html, body {
 /* --------------------------------------------------------- */
 
 .player-screen {
+  position: relative;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  width: 62.5vh; 
-  height: 84.375vh;
-  margin: 5% auto;
-  border: 1px solid black;
-  background-color: white;
+  margin: 50px auto;
+  width: 60vh; 
+  height: 75vh; 
   align-items: center;
-
   text-align: center;
+  box-sizing: border-box;
+  
+  border-top: 45px solid transparent;
+  border-right: 19px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-left: 7px solid transparent;
+  border-image: url('/public/designs/notepad.png') 45 19 21 7 stretch;
+
   font-family: 'architype', sans-serif;
 }
 
 .title {
+  position: absolute;
+  top: -2%;
+  height: 10%;
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   background-color: lightskyblue;
-  width: 100%;
-  height: 10%;
-  position: relative;
+  margin: 10px 0px 0px 0px;
   color: black;
+  font-size: 2vh;
+  
 }
 
 .home-button {
   position: absolute;
-  top: 8%;
-  left: 2%;
+  top: -2%;;
+  left: 0%;
   width: 12%;
+  height: auto;
   cursor: pointer;
+  padding: 1%;
   
   transition: all 0.5s ease;
 }
@@ -109,11 +131,13 @@ html, body {
 }
 
 .content {
+  top: 10%;
   width: 100%;
-  height: 100%;
+  height: 90%;
   background-color: lightcyan;
   display: flex;
   flex-direction: row-reverse;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -121,115 +145,33 @@ html, body {
 }
 
 .player-section {
-  position: absolute;
+  position: relative;
+  top: 0%;
+  left: 0%;
   width: 70%;
   height: 90%;
-  top: 3%;
-  right: 3%;
-  padding: 4% 2% 0% 2%;
   background-color: white;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 10px;
+  margin: 10px;
   border: 1px solid black;
 }
 
-.control-section {
-  position: absolute;
-  display: flex;
-  bottom: 10%;
-  right: 3%;
-  width: 72%;
-  height: 15%;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-right: 1px black solid;
-}
-
-.control-button {
-  margin: 0% 7% 0% 7%;
-  width: 8%;
-  height: auto;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.control-button:hover {
-  transform: scale(1.25);
-}
-
-.control-button:active {
-  background-color: hotpink;           
-}
-
-.gun-button {
-  width: 20%;
-  height: auto;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.gun-button:hover {
-  transform: scale(1.25);
-}
-
-.gun-button:active {
-  background-color: hotpink;           
-}
-
-
-.progress-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0% 0% 5% 0%;
-  color: hotpink;
-  cursor: pointer;
-}
-
-.progress-bar {
-  font-family: "digital", sans-serif;
-  flex: 1; 
-  height: 8px;
-  position: relative;
-  margin: 0% 2% 0% 2%; /* Small margins from time displays */
-  overflow: hidden;
-}
-
-.progress-fill {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  height: 100%; /* Matches parent height exactly */
-  background-color: hotpink;
-  width: 0%; /* Will be updated by JavaScript based on progress */
-  transition: width 0.1s ease;
-}
-
-.time-display {
-  font-size: 100%;
-  font-family: "digital", sans-serif;
-  color: black;
-  text-align: center;
-  min-width: 15%; /* Ensures consistent width for time displays */
-}
-
 .playlist-section {
-  position: absolute;
-  top: 3.75vh;
-  left: 0px;
-  width: 5vw;
-  height: 62.5vh;
+  position: relative;
+  top: 0%;
+  left: 3%;
+  width: 20%;
+  height: 90%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0.667vw;
-  padding: 0.667vw;
+  padding: 10px;
   border: 1px solid black;
 }
 
@@ -237,8 +179,7 @@ html, body {
   color: hotpink;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2vw;
-  padding: 0.667vw;
+  font-size: 2vh;
   transition: all 0.2s ease;
 }
 
@@ -248,15 +189,15 @@ html, body {
 }
 
 .song-item {
-  border-radius: 2.667vw;
-  margin: 1vw;
+  font-size: 1.8vh;
+  border-radius: 10px;
   padding: 0px;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .song-item:hover {
-  transform: translateY(-0.333vw);
+  transform: translateY(-5px);
   color: hotpink;
 }
 
@@ -266,18 +207,18 @@ html, body {
 }
 
 .wolp {
-  height: 17.5vh;
   position: absolute;
-  top: 6.5vh;
-  right: 33.333vw;
+  height: 20%;
+  top: -7.5%;
+  right: 0%;
   z-index: 10;
 }
 
 .headphones {
-  height: 15vh;
+  height: 15%;
   position: absolute;
-  top: 0.625vh;
-  right: 31.333vw;
+  top: -13%;
+  right: -4%;
   z-index: 11;
   animation: bounce-scale 1s infinite;
 }
@@ -291,18 +232,18 @@ html, body {
 }
 
 .truck {
-  height: 21.25vh;
+  height: 24%;
   position: absolute;
-  bottom: 5.175vh;
-  left: 32vw;
+  bottom: 0%;
+  left: 0%;
   z-index: 10;
 }
 
 .joint {
-  height: 1vh;
+  height: 16%;
   position: absolute;
-  bottom: 12.5vh;
-  left: 27.333vw;
+  bottom: 9%;
+  left: -12%;
   z-index: 11;
   animation: bounce-scale 1s infinite;
 }
@@ -328,9 +269,102 @@ html, body {
 }
 
 .jk {
-  height: 17.5vh;
+  height: 30%;
   position: absolute;
-  bottom: 21.25vh;
-  left: 21.667vw;
+  bottom: 15%;
+  left: -40%;
   z-index: 10;
+}
+
+/* Fixed Control Section */
+.control-section {
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* Stack progress bar and buttons vertically */
+  bottom: 0%;
+  width: 100%; /* Consistent with your other sections */
+  height: 15%; /* Slightly taller to accommodate stacked layout */
+  left: 0%; /* Center it (100% - 85% = 15%, divide by 2 = 7.5%) */
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1vh;
+  z-index: 8;
+  box-sizing: border-box;
+}
+
+/* Progress container - takes up top portion */
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40%; /* Takes up 40% of control section height */
+  color: hotpink;
+  cursor: pointer;
+}
+
+/* Time displays */
+.time-display {
+  font-size: 1.8vh;
+  font-family: "digital", sans-serif;
+  color: black;
+  min-width: 6vh;
+  text-align: center;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+/* Progress bar */
+.progress-bar,
+.ascii-progress-bar {
+  font-family: "digital", sans-serif, monospace;
+  flex: 1; /* Take up remaining space */
+  height: 2vh;
+  font-size: 1.5vh;
+  color: hotpink;
+  text-align: center;
+  line-height: 2vh;
+  cursor: pointer;
+}
+
+/* Button container - takes up bottom portion */
+.play-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%; /* Takes up 60% of control section height */
+  gap: 3vh; /* Space between buttons */
+}
+
+/* Control buttons */
+.control-button {
+  height: 3vh;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+.control-button:hover {
+  transform: scale(1.25);
+}
+
+.control-button:active {
+  background-color: hotpink;
+}
+
+/* Gun buttons (prev/next) */
+.gun-button {
+  height: 3vh;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+.gun-button:hover {
+  transform: scale(1.25);
+}
+
+.gun-button:active {
+  background-color: hotpink;
 }
