@@ -125,14 +125,14 @@ function App() {
         <div className = "welcome-screen">
           <img
             className = "welcome-message"
-            src = "/buttons/hi.png"
+            src = "/designs/hi.png"
             alt = ""
           />
 
           <img 
             onClick={enterPlayer} 
             className="enter-button"
-            src = "/buttons/enter.png"
+            src = "/designs/enter.png"
             alt = ""
           />
         </div>
@@ -146,42 +146,42 @@ function App() {
             <img 
             onClick={enterWelcome} 
             className="home-button"
-            src = "/buttons/back.png"
+            src = "/designs/back.png"
             alt = ""
           />
           </div>
 
-          <img 
-            src= "/buttons/wolp_fixed.png"
-            alt=""
-            className = "wolp"
-          />
-
-          <img 
-            src= "/buttons/headphones_fixed.png"
-            alt=""
-            className={`headphones ${isPlaying ? 'playing' : 'paused'}`}
-          />
-
-          <img 
-            src= "/buttons/snow4-fixed.png"
-            alt=""
-            className = "truck"
-          />
-
-          <img 
-            src= "/buttons/joint_fixed.png"
-            alt=""
-            className={`joint ${isPlaying ? 'playing' : 'paused'}`}
-          />
-
-          <img 
-            src= "/buttons/jk.png"
-            alt=""
-            className = "jk"
-          />
-
           <div className = "content">
+            <img 
+              src= "/designs/wolp_fixed.png"
+              alt=""
+              className = "wolp"
+            />
+
+            <img 
+              src= "/designs/headphones_fixed.png"
+              alt=""
+              className={`headphones ${isPlaying ? 'playing' : 'paused'}`}
+            />
+
+            <img 
+              src= "/designs/snow4-fixed.png"
+              alt=""
+              className = "truck"
+            />
+
+            <img 
+              src= "/designs/joint_fixed.png"
+              alt=""
+              className={`joint ${isPlaying ? 'playing' : 'paused'}`}
+            />
+
+            <img 
+              src= "/designs/jk.png"
+              alt=""
+              className = "jk"
+            />
+
             <div className = "player-section">
               <NowPlaying currentSong = {currentSong} /> 
             </div>

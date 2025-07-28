@@ -22,12 +22,12 @@ const Player = ({currentSong, isPlaying, onPlayPause, onNext, onPrevious, curren
 
     // ASCII progress bar!
     const generateAsciiProgressBar = (currentTime, duration) => {
-        const barLength = 18; // Total number of characters in the bar
+        const barLength = 26; // Total number of characters in the bar
         const filledLength = duration > 0 ? Math.round((currentTime / duration) * barLength) : 0;
         const emptyLength = barLength - filledLength;
         
-        const filledChar = '█'; // Full block character
-        const emptyChar = '░';  // Light shade character
+        const filledChar = '■'; // Full block character
+        const emptyChar = '□';  // Light shade character
         
         return filledChar.repeat(filledLength) + emptyChar.repeat(emptyLength);
     };
@@ -43,15 +43,15 @@ const Player = ({currentSong, isPlaying, onPlayPause, onNext, onPrevious, curren
             </div>
 
             <img className="control-button" onClick={onPrevious}
-                src = {"/buttons/prev.png"}
+                src = {"/designs/prev.png"}
                 alt = ""
             /> 
             <img className="control-button" onClick={onPlayPause}
-                src = {isPlaying ? "/buttons/pause-button.png" : "/buttons/play-button.png"}
+                src = {isPlaying ? "/designs/pause-button.png" : "/designs/play-button.png"}
                 alt = ""
             /> 
             <img className="control-button" onClick={onNext}
-                src = {"/buttons/next.png"}
+                src = {"/designs/next.png"}
                 alt = ""
             />
 

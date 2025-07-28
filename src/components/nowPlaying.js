@@ -13,7 +13,7 @@ const NowPlaying = ({currentSong}) => {
                 src={currentSong.image}
                 alt={currentSong.title}
                 /*style={{width: '325px', height: '325px'}} */
-                style={{width: '21.667vw', height: '21.667vw'}}
+                style={{width: '100%', height: 'auto'}}
                 className="album-art"
             />
 
