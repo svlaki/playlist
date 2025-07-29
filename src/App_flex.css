@@ -17,6 +17,20 @@ html, body {
     height: 100%;
 }
 
+/* Mobile phone styles - targets screens 768px and smaller */
+@media (max-width: 768px) {
+  .welcome-screen {
+    width: 90vw; /* Use viewport width instead of vh for mobile */
+    /* All other properties stay the same */
+  }
+
+  .player-screen {
+    width: 90vw; /* Use viewport width instead of vh for mobile */
+    /* All other properties stay the same */
+  }
+}
+
+
 .welcome-screen {
   display: flex;
   position: relative;
@@ -29,11 +43,11 @@ html, body {
   height: 75vh; 
   box-sizing: border-box;
 
-  border-top: 40px solid transparent;
+  border-top: 45px solid transparent;
   border-right: 19px solid transparent;
   border-bottom: 21px solid transparent;
   border-left: 7px solid transparent;
-  border-image: url('/public/designs/notepad.png') 40 19 21 7 stretch;
+  border-image: url('/public/designs/notepad.png') 45 19 21 7 stretch;
 
   background-image: url('/public/extra_images/snow-2.jpg');
   background-size: cover;
@@ -276,15 +290,14 @@ html, body {
   z-index: 10;
 }
 
-/* Fixed Control Section */
 .control-section {
   position: absolute;
   display: flex;
-  flex-direction: column; /* Stack progress bar and buttons vertically */
+  flex-direction: column; 
   bottom: 0%;
-  width: 100%; /* Consistent with your other sections */
-  height: 15%; /* Slightly taller to accommodate stacked layout */
-  left: 0%; /* Center it (100% - 85% = 15%, divide by 2 = 7.5%) */
+  width: 100%; 
+  height: 15%; 
+  left: 0%; 
   justify-content: space-between;
   align-items: center;
   background-color: white;
@@ -293,12 +306,11 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Progress container - takes up top portion */
 .progress-container {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40%; /* Takes up 40% of control section height */
+  height: 40%; 
   color: hotpink;
   cursor: pointer;
 }
@@ -310,10 +322,9 @@ html, body {
   color: black;
   min-width: 6vh;
   text-align: center;
-  flex-shrink: 0; /* Don't shrink */
+  flex-shrink: 0; 
 }
 
-/* Progress bar */
 .progress-bar,
 .ascii-progress-bar {
   font-family: "digital", sans-serif, monospace;
@@ -326,7 +337,6 @@ html, body {
   cursor: pointer;
 }
 
-/* Button container - takes up bottom portion */
 .play-controls {
   display: flex;
   flex-direction: row;
@@ -334,7 +344,7 @@ html, body {
   align-items: center;
   width: 100%;
   height: 60%; /* Takes up 60% of control section height */
-  gap: 3vh; /* Space between buttons */
+  gap: 3vh; 
 }
 
 /* Control buttons */
@@ -353,7 +363,6 @@ html, body {
   background-color: hotpink;
 }
 
-/* Gun buttons (prev/next) */
 .gun-button {
   height: 3vh;
   transition: all 0.2s ease;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App_flex.css';
-import Player from './components/Player2';  // Import your Player
+import Player from './components/Player';  // Import your Player
 import NowPlaying from './components/nowPlaying';
 import Playlist from './components/Playlist';
 import { songs } from './data/songs';  // Import songs

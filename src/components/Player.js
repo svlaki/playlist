@@ -22,18 +22,19 @@ const Player = ({currentSong, isPlaying, onPlayPause, onNext, onPrevious, curren
 
     // ASCII progress bar!
     const generateAsciiProgressBar = (currentTime, duration) => {
-        const barLength = 26; // Total number of characters in the bar
+        const barLength = 26; 
         const filledLength = duration > 0 ? Math.round((currentTime / duration) * barLength) : 0;
         const emptyLength = barLength - filledLength;
         
-        const filledChar = '■'; // Full block character
-        const emptyChar = '□';  // Light shade character
+        const filledChar = '■'; 
+        const emptyChar = '□';  
         
         return filledChar.repeat(filledLength) + emptyChar.repeat(emptyLength);
     };
 
     return (
-        <div className="play-controls">
+        <>
+            {/* Progress container at the top */}
             <div className="progress-container">
                 <span className="time-display">{formatTime(currentTime)}</span>
                 <div className="ascii-progress-bar" onClick={handleProgressClick}>
@@ -42,21 +43,23 @@ const Player = ({currentSong, isPlaying, onPlayPause, onNext, onPrevious, curren
                 <span className="time-display">{formatTime(duration)}</span>
             </div>
 
-            <img className="gun-button" onClick={onPrevious}
-                src = {"/designs/prev.png"}
-                alt = ""
-            /> 
-            <img className="control-button" onClick={onPlayPause}
-                src = {isPlaying ? "/designs/pause-button.png" : "/designs/play-button.png"}
-                alt = ""
-            /> 
-            <img className="gun-button" onClick={onNext}
-                src = {"/designs/next.png"}
-                alt = ""
-            />
-
-        </div>
+            {/* Button controls at the bottom */}
+            <div className="play-controls">
+                <img className="gun-button" onClick={onPrevious}
+                    src={"/designs/prev.png"}
+                    alt="Previous"
+                /> 
+                <img className="control-button" onClick={onPlayPause}
+                    src={isPlaying ? "/designs/pause-button.png" : "/designs/play-button.png"}
+                    alt={isPlaying ? "Pause" : "Play"}
+                /> 
+                <img className="gun-button" onClick={onNext}
+                    src={"/designs/next.png"}
+                    alt="Next"
+                />
+            </div>
+        </>
     );
 };
 
-export default Player; 
+export default Player;
