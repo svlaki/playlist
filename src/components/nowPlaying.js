@@ -18,7 +18,7 @@ const NowPlaying = ({currentSong}) => {
             />
 
             <div className="song-info">
-                <h3 style={{fontSize: '2.5vh'}}>{currentSong.title} - {currentSong.artist} </h3>
+                <h3 style={{fontSize: '2vh'}}>{currentSong.title} - {currentSong.artist} </h3>
             </div>
 
             <div className="song-note">
