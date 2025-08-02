@@ -22,7 +22,7 @@ const NowPlaying = ({currentSong}) => {
             </div>
 
             <div className="song-note">
-                <p style={{fontSize: '1.5vh'}}>{currentSong.note}</p>
+                <p style={{fontSize: '1.4vh'}}>{currentSong.note}</p>
             </div>
 
         </div>
